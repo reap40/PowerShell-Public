@@ -43,7 +43,6 @@ function Get-SubnetsFromCIDR {
         Write-Output "$subnetIP/24"
     }
 }
-
 # Example: Split 192.168.0.0/22 into /24 subnets
-$CIDR = "192.168.25.0/23"
+$CIDR = Read-Host "Input CIDR for example, 192.168.25.0/23"
 Get-SubnetsFromCIDR -CIDR $CIDR
