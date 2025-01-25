@@ -24,7 +24,7 @@ Function Get-SubnetsFromCIDR
         $Subnets = [PSCustomObject]@{
         Name = "$BaseIP/24"
           }
-          $Subnets | Export-Csv $DocumentsPath\CIDR24_Subnets.csv -NoTypeInformation -Append
+          $Subnets | Export-Csv $CsvFile -NoTypeInformation -Append
         
       }
     Else
@@ -58,7 +58,7 @@ Function Get-SubnetsFromCIDR
           $Subnets = [PSCustomObject]@{
              Name = "$SubnetIP/24"
           }
-          $Subnets | Export-Csv $DocumentsPath\CIDR24_Subnets.csv -NoTypeInformation -Append
+          $Subnets | Export-Csv $CsvFile -NoTypeInformation -Append
         }
       }
      Return $Subnets 
